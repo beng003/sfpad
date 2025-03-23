@@ -116,6 +116,13 @@ while getopts 'm:n:s:p:k:g:t:d:P:q:b:x:h' option; do
 		;;
 	d)
 		export INSTALL_DIR=$OPTARG
+		# modify: 修改------------------------------------------------------------
+		# 检查目录是否存在
+		if [ ! -d "$INSTALL_DIR" ]; then
+			mkdir -p "$INSTALL_DIR"  # 自动创建目录（包括父目录）
+			echo "目录已创建：$INSTALL_DIR"
+		fi
+		# modify: 修改------------------------------------------------------------
 		;;
 	P)
 		export KUSCIA_PROTOCOL=$OPTARG
@@ -587,7 +594,7 @@ deploy_kuscia
 deploy_kuscia_lite_alice_bob_tee
 deploy_secretpad
 
-modify: 修改------------------------------------------------------------
+## modify: 修改------------------------------------------------------------
 deploy_node() {
     if is_master; then
 		bash "$I_PATH"/deploy_sfpad/deploy_script/master_deploy.sh latest
@@ -609,8 +616,8 @@ deploy_node() {
     fi
 }
 
-# deploy_node
-# modify: 修改------------------------------------------------------------
+deploy_node
+## modify: 修改------------------------------------------------------------
 
 clear_env
 end_time=$(date +%s)
