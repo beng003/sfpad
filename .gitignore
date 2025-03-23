@@ -1,3 +1,17 @@
 data/*
 images/*
+root-kuscia-*/
+deploy/
+
+
+
 secretpad_jar/secretpad.jar
+
+
+
+uninstall.sh
+delete_dp_datasource-0.sh
+register_app_image_0.sh
+kuscia.sh
+sf-*.yaml
+tee-*.yaml
