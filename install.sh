@@ -587,7 +587,7 @@ deploy_kuscia
 deploy_kuscia_lite_alice_bob_tee
 deploy_secretpad
 
-# modify: 修改------------------------------------------------------------
+modify: 修改------------------------------------------------------------
 deploy_node() {
     if is_master; then
 		bash "$I_PATH"/deploy_sfpad/deploy_script/master_deploy.sh latest
@@ -609,7 +609,7 @@ deploy_node() {
     fi
 }
 
-deploy_node
+# deploy_node
 # modify: 修改------------------------------------------------------------
 
 clear_env
