@@ -6,8 +6,8 @@ deploy/
 
 
 secretpad_jar/secretpad.jar
-
-
+deploy_sfpad/deploy_script/register_app_image.sh
+deploy_sfpad/deploy_script/update-sf-components.sh
 
 uninstall.sh
 delete_dp_datasource-0.sh
